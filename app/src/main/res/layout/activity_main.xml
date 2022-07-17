@@ -25,10 +25,108 @@
 
     <Button
         android:id="@+id/button"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="62dp"
+        android:text="@string/B1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="62dp"
+        android:text="@string/B2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="62dp"
+        android:text="@string/B3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="62dp"
+        android:text="@string/B4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="62dp"
+        android:text="@string/B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="92dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="358dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/Greeting1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="550dp" />
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="261dp"
+        android:text="@string/Greeting2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

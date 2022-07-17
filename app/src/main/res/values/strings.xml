@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Remindy</string>
-
+    <string name="Greeting1">Hello</string>
+    <string name="Greeting2">Good Morning</string>
+    <string name="B1">Button 01</string>
+    <string name="B2">Button 02</string>
+    <string name="B3">Button 03</string>
+    <string name="B4">Button 04</string>
+    <string name="B5">Button 05</string>
 </resources>
