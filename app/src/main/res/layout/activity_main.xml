@@ -34,15 +34,14 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="90dp"
         android:text="@string/app_name"
-        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <Button
         android:id="@+id/button3"
@@ -53,13 +52,15 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_back"
         android:text="@string/B3"
+        android:textAlignment="center"
         android:textColor="@color/Button_txt"
+        android:textSize="18sp"
         app:cornerRadius="30dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintVertical_bias="0.593" />
 
     <Button
         android:id="@+id/button5"
@@ -70,7 +71,9 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_back"
         android:text="@string/B5"
+        android:textAlignment="center"
         android:textColor="@color/Button_txt"
+        android:textSize="18sp"
         app:cornerRadius="30dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +90,9 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_back"
         android:text="@string/B4"
+        android:textAlignment="center"
         android:textColor="@color/Button_txt"
+        android:textSize="18sp"
         app:cornerRadius="30dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,6 +109,7 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_back"
         android:text="@string/B2"
+        android:textAlignment="center"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
         app:cornerRadius="30dip"
@@ -111,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintVertical_bias="0.419" />
 
     <TextView
         android:id="@+id/textView2"
