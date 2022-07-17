@@ -4,7 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#262F5A"
     tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:backgroundTint="@color/Button_back"
+        android:text="@string/B1"
+        android:textAlignment="center"
+        android:textColor="@color/Button_txt"
+        android:textSize="18sp"
+        app:cornerRadius="30dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
 
     <TextView
         android:id="@+id/textView"
@@ -16,40 +35,14 @@
         android:layout_marginBottom="90dp"
         android:text="@string/app_name"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="325dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="62dp"
-        android:text="@string/B1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="325dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="62dp"
-        android:text="@string/B2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <Button
         android:id="@+id/button3"
@@ -58,26 +51,15 @@
         android:layout_marginStart="62dp"
         android:layout_marginTop="47dp"
         android:layout_marginEnd="62dp"
+        android:backgroundTint="@color/Button_back"
         android:text="@string/B3"
+        android:textColor="@color/Button_txt"
+        app:cornerRadius="30dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="325dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="62dp"
-        android:text="@string/B4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintVertical_bias="0.583" />
 
     <Button
         android:id="@+id/button5"
@@ -86,12 +68,50 @@
         android:layout_marginStart="62dp"
         android:layout_marginTop="47dp"
         android:layout_marginEnd="62dp"
+        android:backgroundTint="@color/Button_back"
         android:text="@string/B5"
+        android:textColor="@color/Button_txt"
+        app:cornerRadius="30dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.919" />
+        app:layout_constraintVertical_bias="0.931" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="62dp"
+        android:backgroundTint="@color/Button_back"
+        android:text="@string/B4"
+        android:textColor="@color/Button_txt"
+        app:cornerRadius="30dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="62dp"
+        android:backgroundTint="@color/Button_back"
+        android:text="@string/B2"
+        android:textColor="@color/Button_txt"
+        android:textSize="18sp"
+        app:cornerRadius="30dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
 
     <TextView
         android:id="@+id/textView2"
@@ -102,6 +122,7 @@
         android:layout_marginEnd="358dp"
         android:layout_marginBottom="7dp"
         android:text="@string/Greeting1"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -119,6 +140,7 @@
         android:layout_marginEnd="261dp"
         android:text="@string/Greeting2"
         android:textSize="24sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
