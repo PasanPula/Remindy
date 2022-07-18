@@ -13,17 +13,21 @@
         android:layout_height="72dp"
         android:layout_marginStart="62dp"
         android:layout_marginEnd="62dp"
-        android:backgroundTint="@color/Button_back"
+        android:backgroundTint="#333F4E97"
         android:text="@string/B1"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
-        app:cornerRadius="30dip"
+        android:typeface="sans"
+        app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintVertical_bias="0.308"
+        app:strokeColor="@color/Button_Storke"
+        app:strokeWidth="1dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -38,7 +42,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.036" />
@@ -55,12 +59,15 @@
         android:textAlignment="center"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
-        app:cornerRadius="30dip"
+        android:typeface="sans"
+        app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintVertical_bias="0.593"
+        app:strokeColor="@color/Button_Storke"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/button5"
@@ -74,12 +81,15 @@
         android:textAlignment="center"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
-        app:cornerRadius="30dip"
+        android:typeface="sans"
+        app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="0.931"
+        app:strokeColor="@color/Button_Storke"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/button4"
@@ -93,12 +103,15 @@
         android:textAlignment="center"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
-        app:cornerRadius="30dip"
+        android:typeface="sans"
+        app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.758" />
+        app:layout_constraintVertical_bias="0.758"
+        app:strokeColor="@color/Button_Storke"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/button2"
@@ -112,44 +125,47 @@
         android:textAlignment="center"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
-        app:cornerRadius="30dip"
+        android:typeface="sans"
+        app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419" />
+        app:layout_constraintVertical_bias="0.419"
+        app:strokeColor="@color/Button_Storke"
+        app:strokeWidth="1dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="92dp"
         android:layout_height="39dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="85dp"
         android:layout_marginEnd="358dp"
         android:layout_marginBottom="7dp"
         android:text="@string/Greeting1"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="124dp"
         android:layout_marginEnd="261dp"
         android:text="@string/Greeting2"
-        android:textSize="24sp"
         android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.135" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
