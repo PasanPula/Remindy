@@ -10,4 +10,5 @@
     <color name="Button_back">#333F4E97</color>
     <color name="Button_txt">#22CEE1</color>
     <color name="Button_Storke">#3F4E97</color>
+    <color name="Page_Background">#262F5A</color>
 </resources>
