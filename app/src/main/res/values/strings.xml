@@ -24,5 +24,20 @@
     <string name="DrinkButton">Drink Now</string>
     <string name="DrinkTragetText">Drink Target</string>
 
-
+    <!--    Clinic Reminder-->
+    <string name="activityname">Clinic and Report Reminder</string>
+    <string name="Description">Description</string>
+    <string name="HospitalName">Hospital Name</string>
+    <string name="DoctorName">Doctor Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="time">Time</string>
+    <string name="ex_fever">Ex: Fever</string>
+    <string name="ex_dr_ravi">Ex: Dr.Ravi</string>
+    <string name="add">Add</string>
+    <string name="ex_lanka_hospital">Ex: Lanka Hospital</string>
+    <string name="select_time">Select Time</string>
+    <string name="date">Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="venue">Venue</string>
+    <string name="todo">TODO</string>
 </resources>

@@ -15,4 +15,6 @@
     <color name="Transparent_Tint">#4DD9D9D9</color>
     <color name="ProgressBar_Gradient_01">#11A8FD</color>
     <color name="ProgressBar_Gradient_02">#3FECA2</color>
+    <color name="Hint">#9E9E9E</color>
+    <color name="Add_Button">#22CEE1</color>
 </resources>
