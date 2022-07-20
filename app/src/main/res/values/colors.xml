@@ -10,4 +10,6 @@
     <color name="Button_back">#333F4E97</color>
     <color name="Button_txt">#22CEE1</color>
     <color name="Button_Storke">#3F4E97</color>
+    <color name="App_BG_Tint">#262F5A</color>
+    <color name="Button_Tint">#333F4E97</color>
 </resources>
