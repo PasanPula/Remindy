@@ -12,9 +12,13 @@
     <color name="Button_Storke">#3F4E97</color>
     <color name="App_BG_Tint">#262F5A</color>
     <color name="Button_Tint">#333F4E97</color>
+    <color name="Transparent">#00ffffff</color>
     <color name="Transparent_Tint">#4DD9D9D9</color>
     <color name="ProgressBar_Gradient_01">#11A8FD</color>
     <color name="ProgressBar_Gradient_02">#3FECA2</color>
     <color name="Hint">#9E9E9E</color>
     <color name="Add_Button">#22CEE1</color>
+    <color name="Card">#CBCCCB</color>
+    <color name="Card_Font">#000000</color>
+    <color name="delete">#D60A0A</color>
 </resources>

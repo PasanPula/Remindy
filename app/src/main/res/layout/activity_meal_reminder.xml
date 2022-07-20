@@ -15,64 +15,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
         android:layout_marginEnd="289dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="12dp"
         android:fontFamily="sans-serif"
         android:text="Meal Type"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:typeface="sans"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="289dp"
-        android:layout_marginBottom="1dp"
-        android:fontFamily="sans-serif"
-        android:text="Meal Type"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:typeface="sans"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="289dp"
-        android:layout_marginBottom="1dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/meal_type"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:typeface="sans"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.271" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="377dp"
-        android:layout_height="92dp"
+        android:layout_width="379dp"
+        android:layout_height="78dp"
         android:layout_margin="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:textColorHint="@color/Button_txt"
@@ -83,15 +46,16 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.444">
+        app:layout_constraintVertical_bias="0.464">
 
         <AutoCompleteTextView
             android:id="@+id/Time"
             android:layout_width="360dp"
             android:layout_height="60dp"
+            android:clickable="true"
             android:drawableStart="@drawable/ic_time"
             android:gravity="center"
             android:inputType="none"
@@ -110,17 +74,16 @@
         android:layout_width="249dp"
         android:layout_height="62dp"
         android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/app_name"
         android:gravity="center"
         android:scaleX="2"
         android:scaleY="2"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
         app:srcCompat="@drawable/logo" />
 
     <TextView
@@ -131,23 +94,21 @@
         android:layout_marginStart="250dp"
         android:layout_marginTop="201dp"
         android:layout_marginEnd="133dp"
-        android:layout_marginBottom="198dp"
         android:gravity="center"
         android:text="@string/B5"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="377dp"
-        android:layout_height="89dp"
+        android:layout_width="374dp"
+        android:layout_height="81dp"
         android:layout_margin="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -162,8 +123,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.201">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33">
 
         <AutoCompleteTextView
             android:id="@+id/auto_complete_txt2"
@@ -182,6 +143,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
@@ -193,18 +155,18 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:typeface="sans"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintVertical_bias="0.452" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
         android:fontFamily="sans-serif"
         android:text="@string/date"
         android:textColor="@color/white"
@@ -215,7 +177,7 @@
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.632" />
+        app:layout_constraintVertical_bias="0.652" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
@@ -234,10 +196,10 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.685">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748">
 
         <AutoCompleteTextView
             android:id="@+id/Date"
@@ -267,15 +229,16 @@
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891" />
+        app:layout_constraintVertical_bias="0.915" />
 
     <ImageButton
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/App_BG_Tint"
+        android:backgroundTint="@color/Transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
