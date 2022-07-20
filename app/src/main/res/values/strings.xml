@@ -7,4 +7,11 @@
     <string name="B3">Clinic And Report Reminder </string>
     <string name="B4">Expiry Date Reminder</string>
     <string name="B5">Meal Reminder</string>
+
+    <string name="MealType">MealType</string>
+    <string-array name="MealItem">
+        <item>Beakefast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
 </resources>
