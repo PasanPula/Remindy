@@ -14,6 +14,9 @@
         android:theme="@style/Theme.MaterialComponents.DayNight"
         tools:targetApi="31">
         <activity
+            android:name=".AddNewWaterReminder"
+            android:exported="false" />
+        <activity
             android:name=".AddNewClinicData"
             android:exported="false" />
         <activity
@@ -34,14 +37,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MealReminder_Setting"
-            android:exported="true" >
+        <activity
+            android:name=".MealReminder_Setting"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ExpiryDateReminder"
             android:exported="false" />
@@ -54,6 +58,7 @@
         <activity
             android:name=".WaterReminder"
             android:exported="false" />
+
     </application>
 
 </manifest>

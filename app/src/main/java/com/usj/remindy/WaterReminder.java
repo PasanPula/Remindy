@@ -2,6 +2,7 @@ package com.usj.remindy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -67,6 +68,16 @@ public class WaterReminder extends AppCompatActivity {
                 }
             });
         }
+
+
+        Button Addbtn=findViewById(R.id.addWaterReminder);
+        Addbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(WaterReminder.this,AddNewWaterReminder.class);
+                startActivity(i);
+            }
+        });
 
     }
 }

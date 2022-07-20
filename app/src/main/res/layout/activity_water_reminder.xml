@@ -159,7 +159,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/addReminder"
+        android:id="@+id/addWaterReminder"
         android:layout_width="325dp"
         android:layout_height="49dp"
         android:backgroundTint="@color/ProgressBar_Gradient_01"

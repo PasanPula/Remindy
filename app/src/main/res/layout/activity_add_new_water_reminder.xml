@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/App_BG_Tint"
+    android:clickable="true"
+    tools:context=".AddNewWaterReminder"
+    android:focusable="true">
+
+
+    <TextView
+        android:id="@+id/WatertextView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="289dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/WaterAmount"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/WatertextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/WatertextInputLayout2"
+        style="@style/Widget.MaterialComponents.Badge"
+        android:layout_width="377dp"
+        android:layout_height="92dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textColorHint="@color/Button_txt"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WaterimageView3"
+        app:layout_constraintVertical_bias="0.444">
+
+        <AutoCompleteTextView
+            android:id="@+id/WaterTime"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ic_time"
+            android:gravity="center"
+            android:inputType="none"
+            android:padding="10dp"
+            android:text="@string/NewWaterRemindTimeSelect"
+            android:textAlignment="center"
+            android:textColor="@color/Button_Storke"
+            android:textColorHint="@color/Time"
+            android:textFontWeight="@integer/material_motion_duration_medium_2"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/WaterimageView3"
+        android:layout_width="249dp"
+        android:layout_height="62dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/WatertextView5"
+        android:layout_width="146dp"
+        android:layout_height="26dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="201dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="198dp"
+        android:gravity="center"
+        android:text="@string/B1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/WatertextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WaterimageView3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/WatertextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="377dp"
+        android:layout_height="89dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textColorHint="@color/Button_txt"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WaterimageView3"
+        app:layout_constraintVertical_bias="0.201">
+
+        <AutoCompleteTextView
+            android:id="@+id/Waterauto_complete_txt2"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:drawableStart="@drawable/ic_baseline_local_drink_24"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="@string/Select"
+            android:textAlignment="center"
+            android:textColor="@color/Button_Storke"
+            android:textColorHint="@color/Time"
+            android:textFontWeight="@integer/material_motion_duration_medium_2"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/WatertextView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="289dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/time"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/WatertextInputLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:id="@+id/WatertextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/Date"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/WatertextInputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="376dp"
+        android:layout_height="79dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textColorHint="@color/Button_txt"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WaterimageView3"
+        app:layout_constraintVertical_bias="0.685">
+
+        <AutoCompleteTextView
+            android:id="@+id/WaterDate"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ic_date"
+            android:gravity="center"
+            android:inputType="none"
+            android:padding="10dp"
+            android:text="@string/NewWaterRemindDateSelect"
+            android:textAlignment="center"
+            android:textColor="@color/Button_Storke"
+            android:textColorHint="@color/Time"
+            android:textFontWeight="@integer/material_motion_duration_medium_2"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Waterbutton6"
+        android:layout_width="241dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/ProgressBar_Gradient_01"
+        android:gravity="center"
+        android:text="@string/Add"
+        android:textSize="20sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />
+
+    <ImageButton
+        android:id="@+id/WaterimageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/App_BG_Tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081"
+        app:srcCompat="@drawable/ic_back"
+        android:contentDescription="@string/Back" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
