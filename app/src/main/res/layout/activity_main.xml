@@ -38,10 +38,12 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_Tint"
         android:text="@string/B1"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textAllCaps="true"
         android:textColor="@color/Button_txt"
+        android:textIsSelectable="false"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:typeface="sans"
         app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,9 +63,10 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_Tint"
         android:text="@string/B3"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:typeface="sans"
         app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,9 +86,10 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_Tint"
         android:text="@string/B5"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:typeface="sans"
         app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,9 +109,10 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_Tint"
         android:text="@string/B4"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:typeface="sans"
         app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -127,9 +132,10 @@
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/Button_Tint"
         android:text="@string/B2"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="@color/Button_txt"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:typeface="sans"
         app:cornerRadius="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -182,5 +188,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/group_4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:srcCompat="@drawable/icon_park_solid_water_level" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:srcCompat="@drawable/group" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button3"
+        app:srcCompat="@drawable/carbon_report" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4"
+        app:srcCompat="@drawable/ri_medicine_bottle_fill" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:srcCompat="@drawable/fluent_food_16_regular" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
