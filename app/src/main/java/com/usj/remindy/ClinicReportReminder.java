@@ -9,6 +9,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.provider.AlarmClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -77,7 +79,13 @@ public class ClinicReportReminder extends AppCompatActivity {
                     sqLiteDatabase=clinicReportDatabaseHelper.getWritableDatabase();
                     Long recinsert=sqLiteDatabase.insert("clinic",null,contentValues);
                     if(recinsert!=null){
+
+
                         Toast.makeText(ClinicReportReminder.this,"New Reminder Added",Toast.LENGTH_LONG).show();
+
+                        //Log.i("minute",minute);
+                        //Log.i("hour",hour);
+
                         detail.setText("");
                         hospital.setText("");
                         doctor.setText("");
@@ -122,6 +130,16 @@ public class ClinicReportReminder extends AppCompatActivity {
                 hour = selectedHour;
                 minute = selectedMinute;
                 timeButton.setText(String.format(Locale.getDefault(), "%02d:%02d", hour, minute));
+
+                //for alarm
+                //Intent alar=new Intent(AlarmClock.ACTION_SET_ALARM);
+                //alar.putExtra(AlarmClock.EXTRA_HOUR,selectedHour);
+               // alar.putExtra(AlarmClock.EXTRA_MINUTES,selectedMinute);
+                //Calendar cale= Calendar.getInstance();
+                //String today= DateFormat.getDateInstance(DateFormat.MEDIUM).format(cale.getTime());
+
+
+               // startActivity(alar);
             }
         };
         TimePickerDialog timePickerDialog = new TimePickerDialog(this, /*style,*/ onTimeSetListener, hour, minute, true);
@@ -138,6 +156,7 @@ public class ClinicReportReminder extends AppCompatActivity {
         int day = cal.get(Calendar.DAY_OF_MONTH);
         return makeDateString(day, month, year);
     }
+    //change to public
     private void initDatePicker() {
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -158,37 +177,37 @@ public class ClinicReportReminder extends AppCompatActivity {
     }
 
     private String makeDateString(int day, int month, int year) {
-        return getMonthFormat(month) + " " + day + " " + year;
+        return getMonthFormat(month) + " " + day + ", " + year;
     }
 
     private String getMonthFormat(int month) {
         if(month == 1)
-            return "JAN";
+            return "Jan";
         if(month == 2)
-            return "FEB";
+            return "Feb";
         if(month == 3)
-            return "MAR";
+            return "Mar";
         if(month == 4)
-            return "APR";
+            return "Apr";
         if(month == 5)
-            return "MAY";
+            return "May";
         if(month == 6)
-            return "JUN";
+            return "Jun";
         if(month == 7)
-            return "JUL";
+            return "Jul";
         if(month == 8)
-            return "AUG";
+            return "Aug";
         if(month == 9)
-            return "SEP";
+            return "Sep";
         if(month == 10)
-            return "OCT";
+            return "Oct";
         if(month == 11)
-            return "NOV";
+            return "Nov";
         if(month == 12)
-            return "DEC";
+            return "Dec";
 
         //default should never happen
-        return "JAN";
+        return "Jan";
     }
 
 
