@@ -5,7 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -29,6 +33,8 @@ public class ClinicReportReminder extends AppCompatActivity {
     private EditText doctor;
 
     private ClinicReportDatabaseHelper clinicReportDatabaseHelper;
+    private SQLiteDatabase sqLiteDatabase;
+    private int id=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +57,8 @@ public class ClinicReportReminder extends AppCompatActivity {
 
         dateButton.setText(getTodaysDate());
 
+        editData();
+
         //save data to SQLite database
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,12 +67,53 @@ public class ClinicReportReminder extends AppCompatActivity {
                     Toast.makeText(ClinicReportReminder.this,"All the fields are mandatory to fill",Toast.LENGTH_LONG).show();
                 }
                 else{
-                    clinicReportDatabaseHelper.insertData(new ClinicReportData(detail.getText().toString(),hospital.getText().toString(),doctor.getText().toString(),timeButton.getText().toString(),dateButton.getText().toString()));
-                    Toast.makeText(ClinicReportReminder.this,"New Reminder Added",Toast.LENGTH_LONG).show();
+                    ContentValues contentValues=new ContentValues();
+                    contentValues.put("detail",detail.getText().toString());
+                    contentValues.put("hospital",hospital.getText().toString());
+                    contentValues.put("doctor",doctor.getText().toString());
+                    contentValues.put("date",dateButton.getText().toString());
+                    contentValues.put("time",timeButton.getText().toString());
+
+                    sqLiteDatabase=clinicReportDatabaseHelper.getWritableDatabase();
+                    Long recinsert=sqLiteDatabase.insert("clinic",null,contentValues);
+                    if(recinsert!=null){
+                        Toast.makeText(ClinicReportReminder.this,"New Reminder Added",Toast.LENGTH_LONG).show();
+                        detail.setText("");
+                        hospital.setText("");
+                        doctor.setText("");
+                        dateButton.setText("Select Date");
+                        timeButton.setText("Select Time");
+                        //Log.e(TAG,"insertdata:"+recinsert);
+                    }else{
+                        Toast.makeText(ClinicReportReminder.this,"Something went wrong",Toast.LENGTH_LONG).show();
+                    }
+
+
                 }
             }
         });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ClinicReportReminder.this,AddNewClinicData.class);
+                startActivity(i);
+            }
+        });
     }
+
+    private void editData() {
+        if(getIntent().getBundleExtra("clinicdata")!=null){
+            Bundle bundle=getIntent().getBundleExtra("clinicdata");
+            id=bundle.getInt("id");
+            detail.setText(bundle.getString("detail"));
+            hospital.setText(bundle.getString("hospital"));
+            doctor.setText(bundle.getString("doctor"));
+            dateButton.setText(bundle.getString("date"));
+            timeButton.setText(bundle.getString("time"));
+        }
+    }
+
 
     public void popTimePicker (View view){
         TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {

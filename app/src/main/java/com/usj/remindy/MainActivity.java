@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,ClinicReportReminder.class);
+                Intent i = new Intent(MainActivity.this,AddNewClinicData.class);
                 startActivity(i);
             }
         });

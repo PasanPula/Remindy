@@ -29,15 +29,5 @@ public class ClinicReportDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void insertData(ClinicReportData data){
-          SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
-        ContentValues contentValues=new ContentValues();
-        contentValues.put("detail",data.getDetail());
-        contentValues.put("hospital",data.getHospital());
-        contentValues.put("doctor",data.getDoctor());
-        contentValues.put("date",data.getDate());
-        contentValues.put("time",data.getTime());
-        long clinic = sqLiteDatabase.insert("clinic", null, contentValues);
-        Log.e(TAG,"insertdata:"+clinic);
-    }
+
 }
