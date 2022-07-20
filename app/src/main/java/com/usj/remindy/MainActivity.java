@@ -49,13 +49,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this,ExpiryDateReminder.class);
                 startActivity(i);
+
             }
         });
 
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,MealReminder.class);
+                Intent i = new Intent(MainActivity.this,MealReminder_intro.class);
                 startActivity(i);
             }
         });
