@@ -9,12 +9,8 @@
     <string name="B5">Meal Reminder</string>
     <string name="LogoDescription">Logo</string>
 
-    <string name="select">MealType</string>
-    <string-array name="MealItem">
-        <item>Beakefast</item>
-        <item>Lunch</item>
-        <item>Dinner</item>
-    </string-array>
+
+
 
 
     <!--    Water Reminder-->
@@ -51,4 +47,10 @@
     <string name="select_date">Select Date</string>
     <string name="venue">Venue</string>
     <string name="todo">TODO</string>
+
+<!--    meal Remider-->
+    <string name="Day">Every Day</string>
+    <string name="meal_type">Meal Type</string>
+    <string name="select">Select</string>
+    <string name="submit">Submit</string>
 </resources>
