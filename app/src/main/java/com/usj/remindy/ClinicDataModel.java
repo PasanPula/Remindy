@@ -1,18 +1,28 @@
 package com.usj.remindy;
 
-public class ClinicReportData {
+public class ClinicDataModel {
+    private int id;
     private String detail;
     private String hospital;
     private String doctor;
     private String date;
     private String time;
 
-    public ClinicReportData(String detail, String hospital, String doctor, String date, String time) {
+    public ClinicDataModel(int id, String detail, String hospital, String doctor, String date, String time) {
+        this.id = id;
         this.detail = detail;
         this.hospital = hospital;
         this.doctor = doctor;
         this.date = date;
         this.time = time;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDetail() {
