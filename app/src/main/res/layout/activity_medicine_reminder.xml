@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:background="#262F5A"
     tools:context=".MedicineReminder">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ellipse_5"
+        tools:layout_editor_absoluteX="0dp"
+        tools:srcCompat="@drawable/ellipse_5" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardLunch"
         android:layout_width="393dp"
@@ -286,7 +297,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        tools:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView5"
