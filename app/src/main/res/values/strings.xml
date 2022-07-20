@@ -7,6 +7,7 @@
     <string name="B3">Clinic And Report Reminder </string>
     <string name="B4">Expiry Date Reminder</string>
     <string name="B5">Meal Reminder</string>
+    <string name="LogoDescription">Logo</string>
 
     <string name="MealType">MealType</string>
     <string-array name="MealItem">
@@ -14,4 +15,14 @@
         <item>Lunch</item>
         <item>Dinner</item>
     </string-array>
+
+
+<!--    Water Reminder-->
+    <string name="dash">/</string>
+    <string name="DailyTarget">1000</string>
+    <string name="CompletedAmount">500</string>
+    <string name="DrinkButton">Drink Now</string>
+    <string name="DrinkTragetText">Drink Target</string>
+
+
 </resources>

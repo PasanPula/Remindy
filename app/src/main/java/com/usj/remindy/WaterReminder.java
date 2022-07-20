@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.NumberPicker;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class WaterReminder extends AppCompatActivity {
 
@@ -46,5 +48,21 @@ public class WaterReminder extends AppCompatActivity {
                 countDownTimer.start();
             }
         });
-    }
+
+
+        NumberPicker numberPicker = findViewById(R.id.numberPicker);
+        if (numberPicker != null) {
+            numberPicker.setMinValue(0);
+            numberPicker.setMaxValue(10);
+            numberPicker.setWrapSelectorWheel(true);
+            numberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+                @Override
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    String text = "Changed from " + oldVal + " to " + newVal;
+                    Toast.makeText(WaterReminder.this, text, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
+}
 }
