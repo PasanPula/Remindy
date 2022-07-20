@@ -22,6 +22,12 @@
                 android:endColor="@color/ProgressBar_Gradient_02"
                 android:angle="90" />
 
+            <scale android:scaleWidth="100%">
+                <shape>
+                    <corners android:radius="8dp"/>
+                </shape>
+            </scale>
+
         </shape>
 
     </item>

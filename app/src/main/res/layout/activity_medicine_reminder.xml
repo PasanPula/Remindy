@@ -8,14 +8,19 @@
     tools:context=".MedicineReminder">
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_width="178dp"
+        android:layout_height="78dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ellipse_5"
-        tools:layout_editor_absoluteX="0dp"
-        tools:srcCompat="@drawable/ellipse_5" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardLunch"
@@ -284,21 +289,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="158dp"
-        android:layout_height="49dp"
-        android:scaleX="2"
-        android:scaleY="2"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/logo"
-        tools:srcCompat="@drawable/logo" />
+
 
     <TextView
         android:id="@+id/textView5"
