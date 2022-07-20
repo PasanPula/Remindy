@@ -9,20 +9,27 @@
     <string name="B5">Meal Reminder</string>
     <string name="LogoDescription">Logo</string>
 
-    <string name="select">MealType</string>
-    <string-array name="MealItem">
-        <item>Beakefast</item>
-        <item>Lunch</item>
-        <item>Dinner</item>
-    </string-array>
 
 
-<!--    Water Reminder-->
+
+
+    <!--    Water Reminder-->
     <string name="dash">/</string>
     <string name="DailyTarget">1000</string>
     <string name="CompletedAmount">500</string>
     <string name="DrinkButton">Drink Now</string>
     <string name="DrinkTragetText">Drink Target</string>
+    <string name="DrinkAddReminder">Add Reminder</string>
+        <!--  New  Water Reminder Add-->
+    <string name="WaterAmount">Drink volume</string>
+    <string name="Time">Time</string>
+    <string name="Date">Date</string>
+    <string name="NewWaterRemindAdd">Add Reminder</string>
+    <string name="NewWaterRemindTimeSelect">Select time</string>
+    <string name="NewWaterRemindDateSelect">Select Date</string>
+    <string name="Back">Back</string>
+    <string name="Add">Add</string>
+    <string name="Select">Select</string>
 
     <!--    Clinic Reminder-->
     <string name="activityname">Clinic and Report Reminder</string>
@@ -40,4 +47,10 @@
     <string name="select_date">Select Date</string>
     <string name="venue">Venue</string>
     <string name="todo">TODO</string>
+
+<!--    meal Remider-->
+    <string name="Day">Every Day</string>
+    <string name="meal_type">Meal Type</string>
+    <string name="select">Select</string>
+    <string name="submit">Submit</string>
 </resources>
