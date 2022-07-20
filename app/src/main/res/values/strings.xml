@@ -53,4 +53,12 @@
     <string name="meal_type">Meal Type</string>
     <string name="select">Select</string>
     <string name="submit">Submit</string>
+
+
+    <!--    Clinic Reminder-->
+    <string name="ExSoon">Expiring Soon</string>
+    <string name="MED1">Medicine 01</string>
+    <string name="MED2">Medicine 02</string>
+    <string name="MED3">Medicine 03</string>
+
 </resources>
