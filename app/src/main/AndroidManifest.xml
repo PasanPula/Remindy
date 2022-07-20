@@ -30,6 +30,18 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ExpiryDateReminder"
+            android:exported="false" />
+        <activity
+            android:name=".ClinicReportReminder"
+            android:exported="false" />
+        <activity
+            android:name=".MedicineReminder"
+            android:exported="false" />
+        <activity
+            android:name=".WaterReminder"
+            android:exported="false" />
     </application>
 
 </manifest>
