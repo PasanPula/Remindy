@@ -7,6 +7,7 @@
     android:background="@color/Page_Background"
     tools:context=".MealReminder_intro">
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardLunch"
         android:layout_width="393dp"
@@ -24,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459"
+        app:layout_constraintVertical_bias="0.499"
         tools:ignore="MissingConstraints">
 
         <!--
@@ -53,7 +54,7 @@
             android:id="@+id/Ltxttime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
+            android:layout_gravity="center|start"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
             android:text="Time : "
@@ -64,7 +65,7 @@
             android:id="@+id/Ltxttimevalue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
+            android:layout_gravity="center|start"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="20dp"
             android:text="2.45PM"
@@ -86,124 +87,7 @@
             android:id="@+id/Ltxtdatevalue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|right"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
-            android:text="Every Day"
-            android:textColor="@color/Time"
-            android:textSize="15sp" />
-
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/B5"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.02" />
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardBreakfast"
-        android:layout_width="393dp"
-        android:layout_height="146dp"
-        android:layout_margin="10dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardBackgroundColor="#2B3568"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        tools:ignore="MissingConstraints">
-
-        <!--
-        In the above cardview widget
-        cardelevation property will give elevation to your card view
-        card corner radius will provide radius to your card view
-        card background color will give background color to your card view
-        card max elevation will give the cardview maximum elevation
-        card prevent corner overlap will add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
-        card use compact padding will add padding in API v21+ as well to have the same measurements with previous versions.
-        below are the two widgets imageview and text view we are displaying inside our card view.
-        -->
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|center_horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="@string/breakfast"
-            android:textColor="@color/Button_txt"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/Btxttime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:text="Time : "
-            android:textColor="@color/white"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/Btxttimevalue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="20dp"
-            android:text="2.45PM"
-            android:textColor="@color/Time"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/BtxtDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:text="Date : "
-            android:textColor="@color/white"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/Btxtdatevalue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|right"
+            android:layout_gravity="center|end"
             android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:text="Every Day"
@@ -230,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711"
+        app:layout_constraintVertical_bias="0.741"
         tools:ignore="MissingConstraints">
 
         <!--
@@ -259,7 +143,7 @@
             android:id="@+id/Dtxttime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
+            android:layout_gravity="center|start"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
             android:text="Time : "
@@ -270,7 +154,7 @@
             android:id="@+id/Dtxttimevalue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
+            android:layout_gravity="center|start"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="20dp"
             android:text="2.45PM"
@@ -292,7 +176,7 @@
             android:id="@+id/Dtxtdatevalue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|right"
+            android:layout_gravity="center|end"
             android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:text="Every Day"
@@ -301,5 +185,122 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBreakfast"
+        android:layout_width="393dp"
+        android:layout_height="146dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#2B3568"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247"
+        tools:ignore="MissingConstraints">
+
+        <!--
+        In the above cardview widget
+        cardelevation property will give elevation to your card view
+        card corner radius will provide radius to your card view
+        card background color will give background color to your card view
+        card max elevation will give the cardview maximum elevation
+        card prevent corner overlap will add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
+        card use compact padding will add padding in API v21+ as well to have the same measurements with previous versions.
+        below are the two widgets imageview and text view we are displaying inside our card view.
+        -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/breakfast"
+            android:textColor="@color/Button_txt"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Btxttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Time : "
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Btxttimevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:text="2.45PM"
+            android:textColor="@color/Time"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/BtxtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Date : "
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Btxtdatevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:text="Every Day"
+            android:textColor="@color/Time"
+            android:textSize="15sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="178dp"
+        android:layout_height="78dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/B5"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

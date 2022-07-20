@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Remindy/app/src/main/res/drawable/ic_launcher_background.xml" value="0.124" />
+        <entry key="..\:/Remindy/app/src/main/res/layout/activity_clinic_report_reminder.xml" value="0.2" />
         <entry key="..\:/Remindy/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Remindy/app/src/main/res/layout/activity_meal_reminder_intro.xml" value="0.12360688956433637" />
+        <entry key="..\:/Remindy/app/src/main/res/layout/activity_meal_reminder.xml" value="0.264" />
+        <entry key="..\:/Remindy/app/src/main/res/layout/activity_meal_reminder_intro.xml" value="0.264" />
+        <entry key="..\:/Remindy/app/src/main/res/layout/activity_medicine_reminder.xml" value="0.264" />
         <entry key="..\:/Users/rames/AndroidStudioProjects/Remindy/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
       </map>
     </option>
