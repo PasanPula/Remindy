@@ -192,7 +192,6 @@
         android:layout_height="146dp"
         android:layout_margin="10dp"
         android:clickable="true"
-        android:focusable="true"
         app:cardBackgroundColor="#2B3568"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
