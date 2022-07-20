@@ -9,7 +9,7 @@
     <string name="B5">Meal Reminder</string>
     <string name="LogoDescription">Logo</string>
 
-    <string name="MealType">MealType</string>
+    <string name="select">MealType</string>
     <string-array name="MealItem">
         <item>Beakefast</item>
         <item>Lunch</item>
