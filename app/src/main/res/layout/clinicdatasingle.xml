@@ -100,7 +100,7 @@
 
                />
             <Button
-                android:backgroundTint="@color/delete"
+                android:backgroundTint="@color/Delete"
                 android:layout_width="400px"
                 android:layout_height="wrap_content"
                 android:id="@+id/delete"
