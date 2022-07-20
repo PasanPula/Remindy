@@ -52,17 +52,21 @@ public class WaterReminder extends AppCompatActivity {
 
         NumberPicker numberPicker = findViewById(R.id.numberPicker);
         if (numberPicker != null) {
-            numberPicker.setMinValue(0);
-            numberPicker.setMaxValue(10);
+            final String[] values = {"200ml", "300ml", "400ml", "500ml", "600ml", "700ml"};
+//            numberPicker.setMinValue(0);
+            numberPicker.setValue(200);
+            numberPicker.setWrapSelectorWheel(true);
+            numberPicker.setMaxValue(values.length - 1);
+            numberPicker.setDisplayedValues(values);
             numberPicker.setWrapSelectorWheel(true);
             numberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
                 @Override
                 public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                    String text = "Changed from " + oldVal + " to " + newVal;
+                    String text = "Changed from " + values[oldVal] + " to " + values[newVal];
                     Toast.makeText(WaterReminder.this, text, Toast.LENGTH_SHORT).show();
                 }
             });
-
         }
-}
+
+    }
 }

@@ -23,6 +23,7 @@
     <string name="CompletedAmount">500</string>
     <string name="DrinkButton">Drink Now</string>
     <string name="DrinkTragetText">Drink Target</string>
+    <string name="DrinkAddReminder">Add Reminder</string>
 
     <!--    Clinic Reminder-->
     <string name="activityname">Clinic and Report Reminder</string>
