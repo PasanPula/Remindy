@@ -60,4 +60,11 @@
     <string name="MED3">Medicine 03</string>
     <string name="dummyVal">dummy</string>
 
+    <!--    Clinic Reminder-->
+    <string name="medicineReminder">Medicine Reminder</string>
+    <string name="medicineType">Medicine Type</string>
+    <string name="medicineName">Medicine Name</string>
+    <string name="dose">Dose</string>
+
+
 </resources>
