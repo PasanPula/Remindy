@@ -11,9 +11,11 @@
         <entry key="..\:/Remindy/app/src/main/res/drawable/ic_meal.xml" value="0.2595" />
         <entry key="..\:/Remindy/app/src/main/res/drawable/ic_time.xml" value="0.1725" />
         <entry key="..\:/Remindy/app/src/main/res/layout/activity_clinic_report_reminder.xml" value="0.25416666666666665" />
+        <entry key="..\:/Remindy/app/src/main/res/layout/activity_expiry_date_reminder.xml" value="0.264" />
         <entry key="..\:/Remindy/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Remindy/app/src/main/res/layout/activity_meal_reminder.xml" value="0.264" />
         <entry key="..\:/Remindy/app/src/main/res/layout/activity_meal_reminder_intro.xml" value="0.264" />
+        <entry key="..\:/Remindy/app/src/main/res/layout/activity_medicine_reminder.xml" value="0.1539855072463768" />
         <entry key="..\:/Remindy/app/src/main/res/layout/activity_water_reminder.xml" value="0.1" />
         <entry key="..\:/Remindy/app/src/main/res/layout/clinicdatasingle.xml" value="0.1859375" />
         <entry key="..\:/Remindy/app/src/main/res/layout/list_item.xml" value="0.1" />
