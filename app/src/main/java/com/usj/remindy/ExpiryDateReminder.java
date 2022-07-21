@@ -33,27 +33,27 @@ public class ExpiryDateReminder extends AppCompatActivity {
             }
         });
 
-        initData();
-        initRecyclerView();
+//        initData();
+//        initRecyclerView();
 
     }
 
-    private void initData() {
-        explist = new ArrayList<>();
-        explist.add(new ExpiryItemModel("Biscuit","Munchee","2022/05/04"));
-        explist.add(new ExpiryItemModel("Pepsi","Munchee","2022/05/04"));
-        explist.add(new ExpiryItemModel("Apple","Munchee","2022/05/04"));
+//    private void initData() {
+//        explist = new ArrayList<>();
+//        explist.add(new ExpiryItemModel("Biscuit","Munchee","2022/05/04"));
+//        explist.add(new ExpiryItemModel("Pepsi","Munchee","2022/05/04"));
+//        explist.add(new ExpiryItemModel("Apple","Munchee","2022/05/04"));
+//
+//    }
 
-    }
-
-    private void initRecyclerView() {
-        rv = findViewById(R.id.addExRV);
-        lm =new LinearLayoutManager(this);
-        lm.setOrientation(RecyclerView.VERTICAL);
-        rv.setLayoutManager(lm);
-        adp = new ExpiryItemAdapter(explist);
-        adp.notifyDataSetChanged();
-    }
+//    private void initRecyclerView() {
+//        rv = findViewById(R.id.addExRV);
+//        lm =new LinearLayoutManager(this);
+//        lm.setOrientation(RecyclerView.VERTICAL);
+//        rv.setLayoutManager(lm);
+//        adp = new ExpiryItemAdapter(explist);
+//        adp.notifyDataSetChanged();
+//    }
 
 
 }
