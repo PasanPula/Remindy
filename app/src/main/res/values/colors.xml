@@ -19,5 +19,7 @@
     <color name="Hint">#9E9E9E</color>
     <color name="Add_Button">#22CEE1</color>
     <color name="Transparent">#00FFFFFF</color>
+    <color name="Card_Font">#000000</color>
+    <color name="Delete">#D60A0A</color>
 
 </resources>
