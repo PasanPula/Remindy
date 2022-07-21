@@ -214,6 +214,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
+        android:foreground="@drawable/carbon_report"
         app:layout_constraintBottom_toBottomOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="@+id/button3"
         app:layout_constraintTop_toTopOf="@+id/button3"
