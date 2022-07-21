@@ -48,7 +48,6 @@ public class ExpiryItemAdapter extends RecyclerView.Adapter<ExpiryItemAdapter.Ex
 
         public ExpireViewHolder(@NonNull View itemView) {
             super(itemView);
-
             name = itemView.findViewById(R.id.ExtextViewName);
             desc = itemView.findViewById(R.id.ExtextViewDesc);
             date = itemView.findViewById(R.id.ExtextViewDate);
