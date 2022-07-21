@@ -8,6 +8,7 @@ import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,7 +27,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTxt,TimePick,DatePick;
     ArrayAdapter<String> adapterItems;
     int hour, minute, year,month,day;
-    String format;
+    int format;
     Button SubmitBtn;
 
     @Override
@@ -85,23 +86,23 @@ public class AddNewWaterReminder extends AppCompatActivity {
 
                     hour += 12;
 
-                    format = "AM";
+                    format = 0;
                 }
                 else if (hour == 12) {
 
-                    format = "PM";
+                    format = 1;
 
                 }
                 else if (hour > 12) {
 
                     hour -= 12;
 
-                    format = "PM";
+                    format = 1;
 
                 }
                 else {
 
-                    format = "AM";
+                    format = 0;
                 }
 
                 TimePick.setText(String.format(Locale.getDefault(), "%02d:%02d  %s", hour, minute,format));
@@ -131,7 +132,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
 
     public void addReminder()
     {
-        NotificationService.setNotifi("WaterReminder","Let's Hydrate,Drink Water Now");
+//        NotificationService.setNotifi("WaterReminder","Let's Hydrate,Drink Water Now");
         createNotification();
         Toast.makeText(getApplicationContext(),"Reminder Added",Toast.LENGTH_SHORT).show();
     }
@@ -142,16 +143,16 @@ public class AddNewWaterReminder extends AppCompatActivity {
     public void createNotification () {
         Intent myIntent = new Intent(getApplicationContext() , NotificationService.class ) ;
         AlarmManager alarmManager = (AlarmManager) getSystemService( ALARM_SERVICE ) ;
-        PendingIntent pendingIntent = PendingIntent. getService ( this, 0 , myIntent , 0 ) ;
+        PendingIntent pendingIntent = PendingIntent.getService ( this, 0 , myIntent , 0 ) ;
 
+       System.out.println(day);
         Calendar calendar = Calendar.getInstance () ;
         calendar.set(Calendar.SECOND , 0 ) ;
         calendar.set(Calendar.MINUTE , minute ) ;
         calendar.set(Calendar.HOUR , hour ) ;
-        calendar.set(Calendar.AM_PM , Calendar.AM ) ;
-        calendar.add(Calendar.DAY_OF_MONTH , day) ;
-        calendar.add(Calendar.MONTH,month);
-        calendar.add(Calendar.YEAR,year);
-        alarmManager.setRepeating(AlarmManager. RTC_WAKEUP , calendar.getTimeInMillis() , 1000 * 60 * 60 * 24 , pendingIntent) ;
+        calendar.set(Calendar.AM_PM , format ) ;
+        calendar.add(Calendar.DAY_OF_MONTH , 1) ;
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP , calendar.getTimeInMillis() , 1000 * 60 * 60 * 24 , pendingIntent) ;
+        System.out.println(calendar.getTime());
     }
 }

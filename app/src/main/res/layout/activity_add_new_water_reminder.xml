@@ -29,15 +29,12 @@
         app:layout_constraintVertical_bias="1.0" />
 
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/WatertextInputLayout2"
         style="@style/Widget.MaterialComponents.Badge"
         android:layout_width="377dp"
         android:layout_height="92dp"
         android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:gravity="center"
         android:textColorHint="@color/Button_txt"
         app:boxBackgroundColor="@color/white"
@@ -81,10 +78,9 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
+        app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/logo" />
 
     <TextView
@@ -113,8 +109,6 @@
         android:layout_width="377dp"
         android:layout_height="89dp"
         android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:gravity="center"
         android:textColorHint="@color/Button_txt"
         app:boxBackgroundColor="@color/white"
@@ -187,8 +181,6 @@
         android:layout_width="376dp"
         android:layout_height="79dp"
         android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:gravity="center"
         android:textColorHint="@color/Button_txt"
         app:boxBackgroundColor="@color/white"
@@ -240,13 +232,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/App_BG_Tint"
+        android:contentDescription="@string/Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081"
-        app:srcCompat="@drawable/ic_back"
-        android:contentDescription="@string/Back" />
+        app:layout_constraintVertical_bias="0.056"
+        app:srcCompat="@drawable/ic_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
