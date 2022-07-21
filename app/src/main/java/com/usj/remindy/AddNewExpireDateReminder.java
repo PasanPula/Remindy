@@ -27,7 +27,7 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
     int year,month,day;
     Button AddRemind;
     private SQLiteDatabase sqLiteDatabase;
-    private ExpireDateDatabaseHelper ExpireDateDatabaseHelper;
+    private ExpireDateDatabaseHelper expireDateDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +72,7 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
                     contentValues.put("descr",ItemDesc.getText().toString());
                     contentValues.put("date",ExpDate.getText().toString());
 
-                    sqLiteDatabase=ExpireDateDatabaseHelper.getWritableDatabase();
+                    sqLiteDatabase=expireDateDatabaseHelper.getWritableDatabase();
                     Long recinsert=sqLiteDatabase.insert("expire",null,contentValues);
 
 
