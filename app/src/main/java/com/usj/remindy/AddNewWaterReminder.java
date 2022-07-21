@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,6 +29,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTxt,TimePick,DatePick;
     ArrayAdapter<String> adapterItems;
     int hour, minute, year,month,day;
+    int Abhour,Abminutes;
     String format;
     Button SubmitBtn;
 
@@ -58,7 +62,33 @@ public class AddNewWaterReminder extends AppCompatActivity {
         SubmitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addReminder();
+//                addReminder();
+
+
+                NotificationChannel();
+
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(Calendar.HOUR_OF_DAY, Abhour);
+                calendar.set(Calendar.MINUTE, Abminutes);
+                calendar.set(Calendar.SECOND, 00);
+                if (Calendar.getInstance().after(calendar)) {
+                    calendar.add(Calendar.DAY_OF_MONTH, 1);
+                }
+
+                Intent intent = new Intent(AddNewWaterReminder.this, MemoBroadcast.class);
+               Bundle b = new Bundle();
+               b.putString("Title","WaterReminder");
+               b.putString("Desc","Let's Hydrate,Drink Water Now");
+                intent.putExtra("Details",b);
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
+                }
+
+                Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
             }                                        //when we click on the choose date button it calls the select date method
         });
 
@@ -79,6 +109,8 @@ public class AddNewWaterReminder extends AppCompatActivity {
             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
                 hour = selectedHour;
                 minute = selectedMinute;
+                Abhour= selectedHour;
+                Abminutes = selectedMinute;
 
 
                 if (hour == 0) {
@@ -146,12 +178,31 @@ public class AddNewWaterReminder extends AppCompatActivity {
 
         Calendar calendar = Calendar.getInstance () ;
         calendar.set(Calendar.SECOND , 0 ) ;
-        calendar.set(Calendar.MINUTE , minute ) ;
-        calendar.set(Calendar.HOUR , hour ) ;
-        calendar.set(Calendar.AM_PM , Calendar.AM ) ;
+        calendar.set(Calendar.MINUTE , Abminutes ) ;
+        calendar.set(Calendar.HOUR , Abhour ) ;
+//        calendar.set(Calendar.AM_PM , Calendar.AM ) ;
         calendar.add(Calendar.DAY_OF_MONTH , day) ;
         calendar.add(Calendar.MONTH,month);
         calendar.add(Calendar.YEAR,year);
         alarmManager.setRepeating(AlarmManager. RTC_WAKEUP , calendar.getTimeInMillis() , 1000 * 60 * 60 * 24 , pendingIntent) ;
+    }
+
+
+
+    private void NotificationChannel() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "REMINDY Water";
+            String description = "REMINDY`S CHANNEL";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("Notification Water", name, importance);
+            channel.setDescription(description);
+
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+
+
+        }
     }
 }
