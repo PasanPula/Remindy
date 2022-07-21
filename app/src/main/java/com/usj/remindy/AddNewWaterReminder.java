@@ -163,7 +163,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
 
     public void addReminder()
     {
-        NotificationService.setNotifi("WaterReminder","Let's Hydrate,Drink Water Now");
+//        NotificationService.setNotifi("WaterReminder","Let's Hydrate,Drink Water Now");
         createNotification();
         Toast.makeText(getApplicationContext(),"Reminder Added",Toast.LENGTH_SHORT).show();
     }
