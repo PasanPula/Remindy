@@ -72,7 +72,10 @@ public class AddNewWaterReminder extends AppCompatActivity {
                 calendar.set(Calendar.MINUTE, Abminutes);
                 calendar.set(Calendar.SECOND, 00);
                 if (Calendar.getInstance().after(calendar)) {
-                    calendar.add(Calendar.DAY_OF_MONTH, 1);
+//
+                    calendar.add(Calendar.DAY_OF_MONTH , day) ;
+                    calendar.add(Calendar.MONTH,month);
+                    calendar.add(Calendar.YEAR,year);
                 }
 
                 Intent intent = new Intent(AddNewWaterReminder.this, MemoBroadcast.class);
@@ -161,12 +164,12 @@ public class AddNewWaterReminder extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    public void addReminder()
-    {
-        NotificationService.setNotifi("WaterReminder","Let's Hydrate,Drink Water Now");
-        createNotification();
-        Toast.makeText(getApplicationContext(),"Reminder Added",Toast.LENGTH_SHORT).show();
-    }
+//    public void addReminder()
+//    {
+//        NotificationService.setNotifi("WaterReminder","Let's Hydrate,Drink Water Now");
+//        createNotification();
+//        Toast.makeText(getApplicationContext(),"Reminder Added",Toast.LENGTH_SHORT).show();
+//    }
 
 
 
