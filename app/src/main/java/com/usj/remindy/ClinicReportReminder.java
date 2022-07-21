@@ -2,12 +2,17 @@ package com.usj.remindy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.util.Log;
@@ -26,6 +31,7 @@ public class ClinicReportReminder extends AppCompatActivity {
 
     Button timeButton;
     int hour, minute;
+    int year,month,day;
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
     private Button add;
@@ -78,6 +84,35 @@ public class ClinicReportReminder extends AppCompatActivity {
 
                     sqLiteDatabase=clinicReportDatabaseHelper.getWritableDatabase();
                     Long recinsert=sqLiteDatabase.insert("clinic",null,contentValues);
+
+                    NotificationChannel();
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.set(Calendar.HOUR_OF_DAY, hour);
+                    calendar.set(Calendar.MINUTE, minute);
+                    calendar.set(Calendar.SECOND, 00);
+                    if (Calendar.getInstance().after(calendar)) {
+//
+                        calendar.add(Calendar.DAY_OF_MONTH , day) ;
+                        calendar.add(Calendar.MONTH,month);
+                        calendar.add(Calendar.YEAR,year);
+                    }
+
+                    Intent intent = new Intent(ClinicReportReminder.this, MemoBroadcast.class);
+                    Bundle b = new Bundle();
+                    b.putString("Title","Clinic Reminder");
+                    b.putString("Desc","Today Your Have Appointment");
+                    intent.putExtra("Details",b);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
+                    }
+
+
+
+
                     if(recinsert!=null){
 
 
@@ -108,6 +143,22 @@ public class ClinicReportReminder extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    private void NotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "REMINDY Clinic & Report";
+            String description = "REMINDY`S CHANNEL";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("Notification Clinic", name, importance);
+            channel.setDescription(description);
+
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+
+
+        }
     }
 
     private void editData() {
@@ -167,9 +218,9 @@ public class ClinicReportReminder extends AppCompatActivity {
             }
         };
         Calendar cal = Calendar.getInstance();
-        int year = cal.get(Calendar.YEAR);
-        int month = cal.get(Calendar.MONTH);
-        int day = cal.get(Calendar.DAY_OF_MONTH);
+        year = cal.get(Calendar.YEAR);
+        month = cal.get(Calendar.MONTH);
+        day = cal.get(Calendar.DAY_OF_MONTH);
 
         int style = AlertDialog.THEME_HOLO_LIGHT;
 
