@@ -23,7 +23,7 @@ public class MemoBroadcast extends BroadcastReceiver {
                 .setSmallIcon(R.drawable.ic_notification)
                 .setLargeIcon(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.logo), 128, 128, false))
                 .setContentTitle("Meal Remider")
-                .setContentText("Time To Get Your Meal")
+                .setContentText("It's Time To Get Your "+ intent.getStringExtra("MealType"))
                 .setPriority(Notification.PRIORITY_HIGH)
                 .setAutoCancel(true);
 
