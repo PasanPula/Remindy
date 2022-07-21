@@ -92,35 +92,38 @@ public class MealReminder_Setting extends AppCompatActivity {
                  calendar.set(Calendar.MINUTE, Ab_minute);
                  calendar.set(Calendar.SECOND, 00);
 
-                 if( Seleteditem == "Lunch")
-                 {
-                     Meal_Remider_Gloable.Lunch[1] = hour;
-                     Meal_Remider_Gloable.Lunch[2] = minute;
-                     Meal_Remider_Gloable.Lunch[3] = format;
-                     Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
-                 }
-                 if( Seleteditem == "Dinner")
-                 {
-                     Meal_Remider_Gloable.Dinner[1] = hour;
-                     Meal_Remider_Gloable.Dinner[2] = minute;
-                     Meal_Remider_Gloable.Dinner[3] = format;
-                     Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
-                 }
-                 if( Seleteditem=="Breakfast")
-                 {
-                     Meal_Remider_Gloable.Breakfast[1] = hour;
-                     Meal_Remider_Gloable.Breakfast[2] = minute;
-                     Meal_Remider_Gloable.Breakfast[3] = format;
-                     Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
-
-                 }
+//                 if( Seleteditem == "Lunch")
+//                 {
+//                     Meal_Remider_Gloable.Lunch[1] = hour;
+//                     Meal_Remider_Gloable.Lunch[2] = minute;
+//                     Meal_Remider_Gloable.Lunch[3] = format;
+//                     Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
+//                 }
+//                 if( Seleteditem == "Dinner")
+//                 {
+//                     Meal_Remider_Gloable.Dinner[1] = hour;
+//                     Meal_Remider_Gloable.Dinner[2] = minute;
+//                     Meal_Remider_Gloable.Dinner[3] = format;
+//                     Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
+//                 }
+//                 if( Seleteditem=="Breakfast")
+//                 {
+//                     Meal_Remider_Gloable.Breakfast[1] = hour;
+//                     Meal_Remider_Gloable.Breakfast[2] = minute;
+//                     Meal_Remider_Gloable.Breakfast[3] = format;
+//                     Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
+//
+//                 }
 
                  if (Calendar.getInstance().after(calendar)) {
                      calendar.add(Calendar.DAY_OF_MONTH, 1);
                  }
 
                  Intent intent = new Intent(MealReminder_Setting.this, MemoBroadcast.class);
-                 intent.putExtra("MealType",Seleteditem);
+                 Bundle b = new Bundle();
+                 b.putString("Title","MealReminder");
+                 b.putString("Desc","It's Time To Get Your "+Seleteditem);
+                 intent.putExtra("Details",b);
                  PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
                  AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
@@ -148,10 +151,10 @@ public class MealReminder_Setting extends AppCompatActivity {
     private void NotificationChannel() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "REMINDY";
+            CharSequence name = "REMINDY Meal";
             String description = "REMINDY`S CHANNEL";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel("Notification", name, importance);
+            NotificationChannel channel = new NotificationChannel("Notification Meal", name, importance);
             channel.setDescription(description);
 
 
