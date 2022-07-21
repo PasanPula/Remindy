@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
     int hour, minute, year,month,day;
     int Ab_hour,Ab_minute;
     String format;
+    Button SubmitBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
         autoCompleteTxt.setAdapter(adapterItems);
         TimePick = findViewById(R.id.WaterTime);
         DatePick = findViewById(R.id.WaterDate);
+        SubmitBtn = findViewById(R.id.WaterSubmit);
 
         TimePick.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +53,13 @@ public class AddNewWaterReminder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 popDatePicker(v);
+            }
+        });
+
+        SubmitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }                                        //when we click on the choose date button it calls the select date method
         });
 

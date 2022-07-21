@@ -221,7 +221,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/Waterbutton6"
+        android:id="@+id/WaterSubmit"
         android:layout_width="241dp"
         android:layout_height="57dp"
         android:backgroundTint="@color/ProgressBar_Gradient_01"

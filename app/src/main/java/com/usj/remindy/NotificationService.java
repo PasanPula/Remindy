@@ -11,8 +11,8 @@ import androidx.core.app.NotificationCompat;
 
 public class NotificationService extends Service {
 
-        public static final String NOTIFICATION_CHANNEL_ID = "10001" ;
-        private final static String default_notification_channel_id = "default" ;
+        public static final String NOTIFICATION_CHANNEL_ID = "usj.remindy.ch02" ;
+        private final static String default_notification_channel_id = "usj.remindy.ch0" ;
         private String title;
         private String description;
         public  NotificationService () {
