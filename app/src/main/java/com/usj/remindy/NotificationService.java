@@ -13,13 +13,21 @@ public class NotificationService extends Service {
 
         public static final String NOTIFICATION_CHANNEL_ID = "10001" ;
         private final static String default_notification_channel_id = "default" ;
+        private String title;
+        private String description;
         public  NotificationService () {
+        }
+
+        public void setNotifi(String title,String descrip)
+        {
+            this.description = descrip;
+            this.title =title;
         }
 
         @Override
         public IBinder onBind (Intent intent) {
 
-            Intent notificationIntent = new Intent(getApplicationContext() ,  MainActivity. class ) ;
+            Intent notificationIntent = new Intent(getApplicationContext() ,  MainActivity.class ) ;
 
             notificationIntent.putExtra( "fromNotification" , true ) ;
             notificationIntent.setFlags(Intent. FLAG_ACTIVITY_CLEAR_TOP | Intent. FLAG_ACTIVITY_SINGLE_TOP ) ;
@@ -27,14 +35,14 @@ public class NotificationService extends Service {
 
             NotificationManager mNotificationManager = (NotificationManager) getSystemService( NOTIFICATION_SERVICE ) ;
             NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext() , default_notification_channel_id ) ;
-            mBuilder.setContentTitle( "Remindy" ) ;
+            mBuilder.setContentTitle(  this.title ) ;
             mBuilder.setContentIntent(pendingIntent) ;
-            mBuilder.setContentText( "Remindy Test" ) ;
+            mBuilder.setContentText( this.description ) ;
             mBuilder.setSmallIcon(R.drawable. ic_launcher_foreground ) ;
             mBuilder.setAutoCancel( true ) ;
 
             if (android.os.Build.VERSION. SDK_INT >= android.os.Build.VERSION_CODES. O ) {
-                int importance = NotificationManager. IMPORTANCE_HIGH ;
+                int importance = NotificationManager.IMPORTANCE_HIGH ;
                 NotificationChannel notificationChannel = new
                         NotificationChannel( NOTIFICATION_CHANNEL_ID , "Remindy" , importance) ;
                 mBuilder.setChannelId( NOTIFICATION_CHANNEL_ID ) ;
@@ -46,5 +54,9 @@ public class NotificationService extends Service {
             mNotificationManager.notify(( int ) System. currentTimeMillis () , mBuilder.build()) ;
             throw new UnsupportedOperationException( "Not yet implemented" ) ;
         }
+
+
+
+
     }
 
