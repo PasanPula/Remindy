@@ -205,4 +205,9 @@ public class AddNewWaterReminder extends AppCompatActivity {
 
         }
     }
+
+    public void Goback(View view) {
+        Intent i = new Intent(AddNewWaterReminder.this,WaterReminder.class);
+        startActivity(i);
+    }
 }
