@@ -10,9 +10,6 @@
     <string name="LogoDescription">Logo</string>
 
 
-
-
-
     <!--    Water Reminder-->
     <string name="dash">/</string>
     <string name="DailyTarget">1000</string>
@@ -20,7 +17,7 @@
     <string name="DrinkButton">Drink Now</string>
     <string name="DrinkTragetText">Drink Target</string>
     <string name="DrinkAddReminder">Add Reminder</string>
-        <!--  New  Water Reminder Add-->
+    <!--  New  Water Reminder Add-->
     <string name="WaterAmount">Drink volume</string>
     <string name="Time">Time</string>
     <string name="Date">Date</string>
@@ -48,7 +45,7 @@
     <string name="venue">Venue</string>
     <string name="todo">TODO</string>
 
-<!--    meal Remider-->
+    <!--    meal Remider-->
     <string name="Day">Every Day</string>
     <string name="meal_type">Meal Type</string>
     <string name="select">Select</string>
