@@ -102,7 +102,7 @@
         app:layout_constraintVertical_bias="0.142">
 
         <AutoCompleteTextView
-            android:id="@+id/WaterTime"
+            android:id="@+id/ExName"
             android:layout_width="360dp"
             android:layout_height="60dp"
             android:drawableStart="@drawable/ic_time"
@@ -221,7 +221,7 @@
             android:gravity="center"
             android:inputType="text"
             android:padding="10dp"
-            android:text="Item Name"
+            android:text="Item Description"
             android:textAlignment="center"
             android:textColor="@color/Button_Storke"
             android:textColorHint="@color/Time"
@@ -231,7 +231,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/Submit"
+        android:id="@+id/ExSubmit"
         android:layout_width="241dp"
         android:layout_height="57dp"
         android:backgroundTint="@color/ProgressBar_Gradient_01"
