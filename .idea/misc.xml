@@ -3,26 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android Studio Projects/Remindy/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Android Studio Projects/Remindy/app/src/main/res/layout/activity_medicine_reminder.xml" value="0.2" />
-        <entry key="..\:/Remindy/app/src/main/res/drawable/canclebackground.xml" value="0.1115" />
-        <entry key="..\:/Remindy/app/src/main/res/drawable/ic_back.xml" value="0.2595" />
-        <entry key="..\:/Remindy/app/src/main/res/drawable/ic_date.xml" value="0.2595" />
-        <entry key="..\:/Remindy/app/src/main/res/drawable/ic_meal.xml" value="0.2595" />
-        <entry key="..\:/Remindy/app/src/main/res/drawable/ic_time.xml" value="0.1725" />
-        <entry key="..\:/Remindy/app/src/main/res/layout/activity_clinic_report_reminder.xml" value="0.25416666666666665" />
-        <entry key="..\:/Remindy/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Remindy/app/src/main/res/layout/activity_meal_reminder.xml" value="0.264" />
-        <entry key="..\:/Remindy/app/src/main/res/layout/activity_meal_reminder_intro.xml" value="0.264" />
-        <entry key="..\:/Remindy/app/src/main/res/layout/activity_water_reminder.xml" value="0.1" />
-        <entry key="..\:/Remindy/app/src/main/res/layout/clinicdatasingle.xml" value="0.1859375" />
-        <entry key="..\:/Remindy/app/src/main/res/layout/list_item.xml" value="0.1" />
-        <entry key="..\:/Remindy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Remindy/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/borderbutton.xml" value="0.1085" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/custom_progress.xml" value="0.1085" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1865" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/ic_date_clinic.xml" value="0.1865" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/ic_detail.xml" value="0.1865" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1085" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/ic_meal.xml" value="0.2075" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/ic_time.xml" value="0.1865" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/ic_time_clinic.xml" value="0.1865" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/drawable/roundercornerbutton.xml" value="0.1115" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/activity_add_new_clinic_data.xml" value="0.22" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/activity_clinic_report_reminder.xml" value="0.25" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/activity_expiry_date_reminder.xml" value="0.33" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/activity_meal_reminder.xml" value="0.16" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/activity_meal_reminder_intro.xml" value="0.16666666666666666" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/activity_medicine_reminder.xml" value="0.12092391304347826" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/activity_water_reminder.xml" value="0.25" />
+        <entry key="..\:/STUDY MATERIAL SEM 6/MOBILE APP DEV ITC3122/Assignment/Remindy/app/src/main/res/layout/clinicdatasingle.xml" value="0.3074712643678161" />
         <entry key="..\:/Users/rames/AndroidStudioProjects/Remindy/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

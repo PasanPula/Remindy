@@ -122,30 +122,31 @@
 
     <Button
         android:id="@+id/cancel"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="220dp"
-        android:backgroundTint="@color/Transparent_Tint"
+        android:backgroundTint="@color/Transparent"
         android:text="@string/cancel"
-
+        app:cornerRadius="20dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
+
     <Button
         android:id="@+id/save"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="36dp"
         android:backgroundTint="@color/ProgressBar_Gradient_01"
         android:text="@string/add"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
 
     <com.google.android.material.textfield.TextInputLayout
 
