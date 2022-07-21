@@ -60,5 +60,6 @@
     <string name="MED1">Medicine 01</string>
     <string name="MED2">Medicine 02</string>
     <string name="MED3">Medicine 03</string>
+    <string name="dummyVal">dummy</string>
 
 </resources>
