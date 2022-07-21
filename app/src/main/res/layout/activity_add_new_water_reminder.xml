@@ -58,7 +58,7 @@
             android:layout_height="60dp"
             android:drawableStart="@drawable/ic_time"
             android:gravity="center"
-            android:inputType="time"
+            android:inputType="none"
             android:padding="10dp"
             android:text="@string/NewWaterRemindTimeSelect"
             android:textAlignment="center"
