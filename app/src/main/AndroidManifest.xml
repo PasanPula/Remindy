@@ -62,6 +62,9 @@
             android:name=".MedicineReminder"
             android:exported="false" />
         <activity
+            android:name=".AddNewMedicineData"
+            android:exported="false" />
+        <activity
             android:name=".WaterReminder"
             android:exported="false" />
     </application>
