@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.TimePickerDialog;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -44,6 +45,7 @@ public class MedicineReminder extends AppCompatActivity {
         medicine=findViewById(R.id.etmedicine);
         dose=findViewById(R.id.etdose);
 
+        editData();
 
         adapterItems= new ArrayAdapter<String>(this,R.layout.list_item,items);
         autoCompleteTextView.setAdapter(adapterItems);
@@ -90,8 +92,26 @@ public class MedicineReminder extends AppCompatActivity {
             }
         });
 
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),AddNewMedicineData.class);
+                startActivity(i);
+            }
+        });
 
 
+
+    }
+    private void editData() {
+        if(getIntent().getBundleExtra("medicinedata")!=null){
+            Bundle bundle=getIntent().getBundleExtra("medicinedata");
+            id=bundle.getInt("id");
+            autoCompleteTextView.setText(bundle.getString("type"));
+            medicine.setText(bundle.getString("medicine"));
+            dose.setText(bundle.getString("dose"));
+            timeButton.setText(bundle.getString("time"));
+        }
     }
 
 

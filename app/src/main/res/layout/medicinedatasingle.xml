@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="9dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Transparent_Tint">
+
+        <TextView
+            android:id="@+id/Detailsingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/ic_detail"
+            android:drawablePadding="20px"
+            android:text="This is detail"
+            android:textColor="@color/Card_Font"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Hospitalsingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Detailsingle"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/ic_hospital"
+            android:drawablePadding="20px"
+            android:text="This is Hospital Detail"
+            android:textColor="@color/Card_Font"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:layout_marginLeft="30px"/>
+
+        <TextView
+            android:id="@+id/Doctorsingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Hospitalsingle"
+            android:layout_marginLeft="30px"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/ic_doctor"
+            android:drawablePadding="20px"
+            android:text="This is Doctor Detail"
+            android:textColor="@color/Card_Font"
+            android:textSize="20dp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/Timesingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Detailsingle"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:drawableEnd="@drawable/ic_date_clinic"
+            android:drawablePadding="20px"
+            android:gravity="right"
+            android:text="This is Date"
+            android:textColor="@color/Card_Font"
+            android:textSize="20dp"
+            android:textStyle="normal" />
+        <LinearLayout
+            android:layout_below="@id/Doctorsingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+           <Button
+               android:backgroundTint="@color/ProgressBar_Gradient_01"
+               android:layout_width="400px"
+               android:layout_height="wrap_content"
+               android:id="@+id/edit"
+               android:layout_weight="1"
+               android:text="Edit"
+               android:layout_marginLeft="120px"
+
+               />
+            <Button
+                android:backgroundTint="@color/Delete"
+                android:layout_width="400px"
+                android:layout_height="wrap_content"
+                android:id="@+id/delete"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:layout_marginLeft="30px"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
