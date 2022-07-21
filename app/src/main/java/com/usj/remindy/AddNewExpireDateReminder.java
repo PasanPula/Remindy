@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
@@ -20,6 +21,8 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
     AutoCompleteTextView ItemName,ItemDesc,ExpDate;
     int year,month,day;
     Button AddRemind;
+    private SQLiteDatabase sqLiteDatabase;
+    private ExpireDateDatabaseHelper ExpireDateDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +66,17 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
                     contentValues.put("name",ItemName.getText().toString());
                     contentValues.put("descr",ItemDesc.getText().toString());
                     contentValues.put("date",ExpDate.getText().toString());
+
+                    sqLiteDatabase=ExpireDateDatabaseHelper.getWritableDatabase();
+                    Long recinsert=sqLiteDatabase.insert("expire",null,contentValues);
+
+                    if(recinsert!=null){
+                        Toast.makeText(AddNewExpireDateReminder.this,"New Reminder Added",Toast.LENGTH_LONG).show();
+
+                        ItemName.setText("");
+                        ItemDesc.setText("");
+                        ExpDate.setText("Select Date");
+                    }
                 }
             }
         });
