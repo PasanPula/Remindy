@@ -252,6 +252,8 @@
         android:layout_height="57dp"
         android:backgroundTint="@color/Transparent_Tint"
         android:gravity="center"
+        android:clickable="true"
+        android:onClick="btnCancle"
         android:text="@string/cancel"
         android:textSize="20sp"
         app:cornerRadius="20dp"
