@@ -26,7 +26,6 @@ public class AddNewWaterReminder extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTxt,TimePick,DatePick;
     ArrayAdapter<String> adapterItems;
     int hour, minute, year,month,day;
-    int Ab_hour,Ab_minute;
     String format;
     Button SubmitBtn;
 
@@ -59,7 +58,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
         SubmitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addReminder();
             }                                        //when we click on the choose date button it calls the select date method
         });
 
@@ -67,7 +66,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(),"Item: "+item,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),"Item: "+item,Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -80,8 +79,7 @@ public class AddNewWaterReminder extends AppCompatActivity {
             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
                 hour = selectedHour;
                 minute = selectedMinute;
-                Ab_hour=selectedHour;
-                Ab_minute=selectedMinute;
+
 
                 if (hour == 0) {
 
@@ -131,20 +129,29 @@ public class AddNewWaterReminder extends AppCompatActivity {
         datePickerDialog.show();
     }
 
+    public void addReminder()
+    {
+        NotificationService.setNotifi("WaterReminder","Let's Hydrate,Drink Water Now");
+        createNotification();
+        Toast.makeText(getApplicationContext(),"Reminder Added",Toast.LENGTH_SHORT).show();
+    }
 
 
 
-    public void createNotification (View view) {
+
+    public void createNotification () {
         Intent myIntent = new Intent(getApplicationContext() , NotificationService.class ) ;
         AlarmManager alarmManager = (AlarmManager) getSystemService( ALARM_SERVICE ) ;
         PendingIntent pendingIntent = PendingIntent. getService ( this, 0 , myIntent , 0 ) ;
 
         Calendar calendar = Calendar.getInstance () ;
         calendar.set(Calendar.SECOND , 0 ) ;
-        calendar.set(Calendar.MINUTE , 0 ) ;
-        calendar.set(Calendar.HOUR , 0 ) ;
+        calendar.set(Calendar.MINUTE , minute ) ;
+        calendar.set(Calendar.HOUR , hour ) ;
         calendar.set(Calendar.AM_PM , Calendar.AM ) ;
-        calendar.add(Calendar.DAY_OF_MONTH , 1 ) ;
+        calendar.add(Calendar.DAY_OF_MONTH , day) ;
+        calendar.add(Calendar.MONTH,month);
+        calendar.add(Calendar.YEAR,year);
         alarmManager.setRepeating(AlarmManager. RTC_WAKEUP , calendar.getTimeInMillis() , 1000 * 60 * 60 * 24 , pendingIntent) ;
     }
 }

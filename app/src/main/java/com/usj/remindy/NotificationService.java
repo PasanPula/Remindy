@@ -13,15 +13,15 @@ public class NotificationService extends Service {
 
         public static final String NOTIFICATION_CHANNEL_ID = "usj.remindy.ch02" ;
         private final static String default_notification_channel_id = "usj.remindy.ch0" ;
-        private String title;
-        private String description;
+        private static String title ="empty";
+        private static String description ="empty";
         public  NotificationService () {
         }
 
-        public void setNotifi(String title,String descrip)
+        public static void  setNotifi(String ti,String descrip)
         {
-            this.description = descrip;
-            this.title =title;
+            description = descrip;
+            title = ti;
         }
 
         @Override
@@ -35,9 +35,9 @@ public class NotificationService extends Service {
 
             NotificationManager mNotificationManager = (NotificationManager) getSystemService( NOTIFICATION_SERVICE ) ;
             NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext() , default_notification_channel_id ) ;
-            mBuilder.setContentTitle(  this.title ) ;
+            mBuilder.setContentTitle(  title ) ;
             mBuilder.setContentIntent(pendingIntent) ;
-            mBuilder.setContentText( this.description ) ;
+            mBuilder.setContentText( description ) ;
             mBuilder.setSmallIcon(R.drawable. ic_launcher_foreground ) ;
             mBuilder.setAutoCancel( true ) ;
 
