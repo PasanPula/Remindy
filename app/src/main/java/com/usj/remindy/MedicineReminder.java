@@ -2,10 +2,15 @@ package com.usj.remindy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +20,7 @@ import android.widget.Button;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.Locale;
 
 public class MedicineReminder extends AppCompatActivity {
@@ -72,6 +78,32 @@ public class MedicineReminder extends AppCompatActivity {
 
                     sqLiteDatabase=medicineReminderDatabaseHelper.getWritableDatabase();
                     Long recinsert=sqLiteDatabase.insert("medicine",null,contentValues);
+
+                    NotificationChannel();
+
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.set(Calendar.HOUR_OF_DAY, hour);
+                    calendar.set(Calendar.MINUTE, minute);
+                    calendar.set(Calendar.SECOND, 00);
+                    if (Calendar.getInstance().after(calendar)) {
+                        calendar.add(Calendar.DAY_OF_MONTH , 1) ;
+
+                    }
+
+                    Intent intent = new Intent(MedicineReminder.this, MemoBroadcast.class);
+                    Bundle b = new Bundle();
+                    b.putString("Title","MedicineReminder");
+                    b.putString("Desc","Get Your "+medicine.getText().toString()+" Medication Now (Dose : "+dose.getText().toString()+")");
+                    intent.putExtra("Details",b);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
+                    }
+
+
                     if(recinsert!=null){
 
 
@@ -103,6 +135,23 @@ public class MedicineReminder extends AppCompatActivity {
 
 
     }
+
+    private void NotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "REMINDY Medicine";
+            String description = "REMINDY`S CHANNEL";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("Notification Medicine", name, importance);
+            channel.setDescription(description);
+
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+
+
+        }
+    }
+
     private void editData() {
         if(getIntent().getBundleExtra("medicinedata")!=null){
             Bundle bundle=getIntent().getBundleExtra("medicinedata");
