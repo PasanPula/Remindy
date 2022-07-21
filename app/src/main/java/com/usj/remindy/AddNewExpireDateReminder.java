@@ -2,10 +2,15 @@ package com.usj.remindy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
 import android.app.DatePickerDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
@@ -70,6 +75,43 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
                     sqLiteDatabase=ExpireDateDatabaseHelper.getWritableDatabase();
                     Long recinsert=sqLiteDatabase.insert("expire",null,contentValues);
 
+
+                    NotificationChannel();
+
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.set(Calendar.HOUR_OF_DAY, 1);
+                    calendar.set(Calendar.MINUTE, 54);
+                    calendar.set(Calendar.SECOND, 00);
+                    calendar.set(Calendar.AM_PM,0);
+
+                    if (Calendar.getInstance().after(calendar)) {
+//
+                        calendar.add(Calendar.DAY_OF_MONTH , day) ;
+                        calendar.add(Calendar.MONTH,month);
+                        calendar.add(Calendar.YEAR,year);
+                    }
+
+                    Intent intent = new Intent(AddNewExpireDateReminder.this, MemoBroadcast.class);
+                    Bundle b = new Bundle();
+                    b.putString("Title","ExpireDateReminder");
+                    b.putString("Desc",ItemName.getText().toString()+" Will be Expire Today");
+                    intent.putExtra("Details",b);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
+                    }
+
+                    Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
+
                     if(recinsert!=null){
                         Toast.makeText(AddNewExpireDateReminder.this,"New Reminder Added",Toast.LENGTH_LONG).show();
 
@@ -82,6 +124,22 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
         });
 
 
+    }
+
+    private void NotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "REMINDY Expire";
+            String description = "REMINDY`S CHANNEL";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("Notification Expire", name, importance);
+            channel.setDescription(description);
+
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+
+
+        }
     }
 
     public void btnCancle(View view) {
