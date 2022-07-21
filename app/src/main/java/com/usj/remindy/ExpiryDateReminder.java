@@ -49,7 +49,7 @@ public class ExpiryDateReminder extends AppCompatActivity {
 
     private void displayData() {
         sqLiteDatabase=expireDateDatabaseHelper.getReadableDatabase();
-        Cursor cursor=sqLiteDatabase.rawQuery("select * from clinic ",null);
+        Cursor cursor=sqLiteDatabase.rawQuery("select * from expire ",null);
         ArrayList<ExpiryItemModel>modelArrayList=new ArrayList<>();
         while (cursor.moveToNext()){
             int id=cursor.getInt(0);
