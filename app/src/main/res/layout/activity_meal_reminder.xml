@@ -219,7 +219,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/Submit"
         android:layout_width="241dp"
         android:layout_height="57dp"
         android:backgroundTint="@color/ProgressBar_Gradient_01"
@@ -229,10 +229,24 @@
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915" />
+        app:layout_constraintVertical_bias="0.86" />
+
+    <Button
+        android:id="@+id/Cancel"
+        android:layout_width="241dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/Transparent"
+        android:gravity="center"
+        android:text="@string/Cancle"
+        android:textSize="20sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
     <ImageButton
         android:id="@+id/back"
