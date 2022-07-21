@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/App_BG_Tint">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardExp01"
+                android:layout_width="393dp"
+                android:layout_height="190dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#2B3568"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.338"
+                tools:ignore="MissingConstraints">
+
+                <ImageButton
+                    android:id="@+id/expDel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:backgroundTint="@color/Transparent"
+                    android:contentDescription="@string/MED1"
+                    app:srcCompat="@drawable/ic_outline_delete_24" />
+
+                <TextView
+                    android:id="@+id/ExtextViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MED1"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/ExtextViewDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="40dp"
+                    android:drawableStart="@drawable/ic_baseline_medical_services_24"
+                    android:drawablePadding="8dp"
+                    android:text="@string/MED1"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/ExtextViewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableLeft="@drawable/ic_baseline_event_available_24"
+                    android:drawablePadding="8dp"
+                    android:text="@string/MED1"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
