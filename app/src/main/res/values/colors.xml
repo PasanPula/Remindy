@@ -17,4 +17,6 @@
     <color name="ProgressBar_Gradient_02">#3FECA2</color>
     <color name="Hint">#9E9E9E</color>
     <color name="Add_Button">#22CEE1</color>
+    <color name="Transparent">#00FFFFFF</color>
+
 </resources>
