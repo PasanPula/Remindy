@@ -2,7 +2,7 @@
     <string name="app_name">Remindy</string>
     <string name="Greeting1">Hello</string>
     <string name="Greeting2">Good Morning</string>
-    <string name="B1">Water Riminder</string>
+    <string name="B1">Water Reminder</string>
     <string name="B2">Medicine Reminder</string>
     <string name="B3">Clinic And Report Reminder </string>
     <string name="B4">Expiry Date Reminder</string>
@@ -12,8 +12,8 @@
 
     <!--    Water Reminder-->
     <string name="dash">/</string>
-    <string name="DailyTarget">1000</string>
-    <string name="CompletedAmount">500</string>
+    <string name="DailyTarget">6500</string>
+    <string name="CompletedAmount">0</string>
     <string name="DrinkButton">Drink Now</string>
     <string name="DrinkTragetText">Drink Target</string>
     <string name="DrinkAddReminder">Add Reminder</string>

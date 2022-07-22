@@ -51,34 +51,34 @@ public class ExpiryItemAdapter extends RecyclerView.Adapter<ExpiryItemAdapter.Mo
 
 
         //click button to go to ClinicReport Reminder
-        holder.btedit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bundle bundle=new Bundle();
-                bundle.putInt("id",model.getId());
-                bundle.putString("name",model.getItemName());
-                bundle.putString("des",model.getItemDesc());
-                bundle.putString("date",model.getItemDesc());
-                Intent i = new Intent(context,ClinicReportReminder.class);
-                i.putExtra("expiredata",bundle);
-                context.startActivity(i);
-            }
-        });
+//        holder.btedit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Bundle bundle=new Bundle();
+//                bundle.putInt("id",model.getId());
+//                bundle.putString("name",model.getItemName());
+//                bundle.putString("des",model.getItemDesc());
+//                bundle.putString("date",model.getItemDesc());
+//                Intent i = new Intent(context,ClinicReportReminder.class);
+//                i.putExtra("expiredata",bundle);
+//                context.startActivity(i);
+//            }
+//        });
 
-        holder.btdelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ExpireDateDatabaseHelper expireDateDatabaseHelper= new ExpireDateDatabaseHelper(context);
-                sqLiteDatabase=expireDateDatabaseHelper.getReadableDatabase();
-                long recdelete=sqLiteDatabase.delete("expire","id="+model.getId(),null);
-                if(recdelete!=-1){
-                    Toast.makeText(context,"Data Deleted!",Toast.LENGTH_LONG).show();
-                    modelArrayList.remove(position);
-                    notifyDataSetChanged();
-                }
-
-            }
-        });
+//        holder.btdelete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ExpireDateDatabaseHelper expireDateDatabaseHelper= new ExpireDateDatabaseHelper(context);
+//                sqLiteDatabase=expireDateDatabaseHelper.getReadableDatabase();
+//                long recdelete=sqLiteDatabase.delete("expire","id="+model.getId(),null);
+//                if(recdelete!=-1){
+//                    Toast.makeText(context,"Data Deleted!",Toast.LENGTH_LONG).show();
+//                    modelArrayList.remove(position);
+//                    notifyDataSetChanged();
+//                }
+//
+//            }
+//        });
     }
 
     @Override
@@ -91,9 +91,9 @@ public class ExpiryItemAdapter extends RecyclerView.Adapter<ExpiryItemAdapter.Mo
         Button btedit,btdelete;
         public ModelViewHolder(@NonNull View itemView) {
             super(itemView);
-            ExtextViewName=(TextView) itemView.findViewById(R.id.Detailsingle);
-            ExtextViewDesc=(TextView) itemView.findViewById(R.id.Hospitalsingle);
-            ExtextViewDate=(TextView) itemView.findViewById(R.id.Doctorsingle);
+            ExtextViewName=(TextView) itemView.findViewById(R.id.ExtextViewName);
+            ExtextViewDesc=(TextView) itemView.findViewById(R.id.ExtextViewDesc);
+            ExtextViewDate=(TextView) itemView.findViewById(R.id.ExtextViewDate);
             //btedit=(Button) itemView.findViewById(R.id.edit);
             //btdelete=(Button) itemView.findViewById(R.id.delete);
 

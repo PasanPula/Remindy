@@ -35,7 +35,7 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
         setContentView(R.layout.activity_add_new_expire_date_reminder);
 
         ImageButton back = findViewById(R.id.back);
-        ExpireDateDatabaseHelper ExDb = new ExpireDateDatabaseHelper(getApplicationContext());
+        expireDateDatabaseHelper = new ExpireDateDatabaseHelper(getApplicationContext());
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +117,7 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
 
                         ItemName.setText("");
                         ItemDesc.setText("");
-                        ExpDate.setText("Select Date");
+//                        ExpDate.setText("Select Date");
                     }
                 }
             }
