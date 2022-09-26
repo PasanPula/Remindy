@@ -79,14 +79,14 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
                     NotificationChannel();
 
                     Calendar calendar = Calendar.getInstance();
-                    calendar.set(Calendar.HOUR_OF_DAY, 1);
-                    calendar.set(Calendar.MINUTE, 54);
+                    calendar.set(Calendar.HOUR, 2);
+                    calendar.set(Calendar.MINUTE, 06);
                     calendar.set(Calendar.SECOND, 00);
                     calendar.set(Calendar.AM_PM,0);
 
                     if (Calendar.getInstance().after(calendar)) {
 //
-                        calendar.add(Calendar.DAY_OF_MONTH , day) ;
+                        calendar.add(Calendar.DAY_OF_MONTH , 1) ;
                         calendar.add(Calendar.MONTH,month);
                         calendar.add(Calendar.YEAR,year);
                     }
@@ -104,7 +104,7 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
                         alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
                     }
 
-                    Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),"Successfully Setup The Remider",Toast.LENGTH_SHORT).show();
 
 
 
@@ -115,9 +115,9 @@ public class AddNewExpireDateReminder extends AppCompatActivity {
                     if(recinsert!=null){
                         Toast.makeText(AddNewExpireDateReminder.this,"New Reminder Added",Toast.LENGTH_LONG).show();
 
-                        ItemName.setText("");
-                        ItemDesc.setText("");
-                        ExpDate.setText("Select Date");
+//                        ItemName.setText("");
+//                        ItemDesc.setText("");
+//                        ExpDate.setText("Select Date");
                     }
                 }
             }

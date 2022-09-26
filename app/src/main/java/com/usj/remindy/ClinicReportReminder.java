@@ -267,6 +267,9 @@ public class ClinicReportReminder extends AppCompatActivity {
         public void openDatePicker (View view){
             datePickerDialog.show();
         }
-
+    public void Goback(View view) {
+        Intent i = new Intent(ClinicReportReminder.this,MainActivity.class);
+        startActivity(i);
+    }
 }
 

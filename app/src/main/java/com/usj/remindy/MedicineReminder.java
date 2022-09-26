@@ -180,4 +180,9 @@ public class MedicineReminder extends AppCompatActivity {
         timePickerDialog.setTitle("Select Time");
         timePickerDialog.show();
     }
+
+    public void Goback(View view) {
+        Intent i = new Intent(MedicineReminder.this,MainActivity.class);
+        startActivity(i);
+    }
 }

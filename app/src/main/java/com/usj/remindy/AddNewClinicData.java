@@ -65,4 +65,9 @@ public class AddNewClinicData extends AppCompatActivity {
     private void findid() {
         recyclerView=findViewById(R.id.rv);
     }
+
+    public void Goback(View view) {
+        Intent i = new Intent(AddNewClinicData.this,MainActivity.class);
+        startActivity(i);
+    }
 }

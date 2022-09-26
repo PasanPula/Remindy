@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class WaterReminder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_reminder);
 
+
         progressBar = findViewById(R.id.progressBar);
         StartProgress = findViewById(R.id.startProgess);
 
@@ -35,6 +37,8 @@ public class WaterReminder extends AppCompatActivity {
                 progressBar.setMax(100);
 
             }
+
+
 
             @Override
             public void onFinish() {
@@ -79,5 +83,12 @@ public class WaterReminder extends AppCompatActivity {
             }
         });
 
+
+
+
+    }
+    public void Goback(View view) {
+        Intent i = new Intent(WaterReminder.this,MainActivity.class);
+        startActivity(i);
     }
 }

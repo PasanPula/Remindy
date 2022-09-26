@@ -69,4 +69,8 @@ public class ExpiryDateReminder extends AppCompatActivity {
     private void findid() {
         recyclerView=findViewById(R.id.addExRV);
     }
+    public void Goback(View view) {
+        Intent i = new Intent(ExpiryDateReminder.this,MainActivity.class);
+        startActivity(i);
+    }
 }

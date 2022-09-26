@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Remindy</string>
     <string name="Greeting1">Hello</string>
-    <string name="Greeting2">Good Morning</string>
+    <string name="Greeting2">Good Evening</string>
     <string name="B1">Water Riminder</string>
     <string name="B2">Medicine Reminder</string>
     <string name="B3">Clinic And Report Reminder </string>
